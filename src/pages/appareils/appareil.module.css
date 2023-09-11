@@ -1,0 +1,206 @@
+button.b89 {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+   
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  button.b89:hover,
+  button.b89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  button.b89:active {
+    background: var(--color);
+    color: #fff;
+  }
+
+
+
+  .b93 {
+    --c: #fff;
+    /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #1B5E20;
+    /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+    text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+      calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+    position: relative;
+    bottom:15px;
+    left:25px;
+  }
+  
+  .b93:hover,
+  .b93:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+  }
+  
+  .b93:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+  }
+  
+  .b93 {
+    font-weight: bold;
+    /* font-size: 2rem; */
+    font-size: 18px;
+    width:110px;
+    height: 45px;
+    margin-left: -30px;
+    cursor: pointer;
+    padding: .1em .3em;
+  }
+
+  .b92 {
+    --c: #fff;
+    /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #D32F2F;
+    /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+    text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+      calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+    position: relative;
+    bottom:15px;
+    right:25px;
+  }
+  
+  .b92:hover,
+  .b92:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+  }
+  
+  .b92:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+  }
+  
+  .b92 {
+    font-weight: bold;
+    /* font-size: 2rem; */
+    font-size: 18px;
+    width:110px;
+    height: 45px;
+    margin-left: 150px;
+    margin-right: -20px;
+    cursor: pointer;
+    padding: .1em .3em;
+  }
+
+  div.iclose {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right:5px;
+    top:5px;
+    background: #455a64;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -5px rgba(255, 255, 255, .5);
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+    animation: fade-in 0.5s ease-out 0.25s both;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+   }
+}
+.iclose .circle path {
+    stroke: rgba(255, 255, 255, 1);
+    fill: none;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    animation: progress 0.5s ease-out 0.25s both;
+}
+@keyframes progress {
+    from {
+        stroke-dasharray: 0 100;
+   }
+}
+.iclose span {
+    display: block;
+    width: 13px;
+    height: 2px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px -5px rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+    animation: slide-in 0.5s ease-in-out 0.25s both;
+}
+@keyframes slide-in {
+    from {
+        width: 0;
+   }
+}
+.iclose span:nth-child(1) {
+    top: 19px;
+    left: 20px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+.iclose span:nth-child(2) {
+    top: 19px;
+    right: 20px;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.iclose span:nth-child(3) {
+    bottom: 19px;
+    left: 20px;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+.iclose span:nth-child(4) {
+    bottom: 19px;
+    right: 20px;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+.iclose:hover {
+    background: #37474f;
+}
+.iclose:hover span {
+    width: 15px;
+}
+
+
+
+
+  
